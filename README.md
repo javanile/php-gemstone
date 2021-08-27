@@ -1,1 +1,1 @@
-# php-gemstone
+# PHP Gemstone
