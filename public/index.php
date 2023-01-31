@@ -41,15 +41,13 @@ AppFactory::setContainer($container);
 $app = AppFactory::create();
 $callableResolver = $app->getCallableResolver();
 
-/*
 // Register middleware
-$middleware = require __DIR__ . '/../app/middleware.php';
+$middleware = require __DIR__ . '/../src/routes/middleware.php';
 $middleware($app);
 
 // Register routes
-$routes = require __DIR__ . '/../app/routes.php';
-$routes($app);
-*/
+$api = require __DIR__ . '/../src/routes/api.php';
+$api($app);
 
 /** @var SettingsInterface $settings */
 $settings = $container->get(SettingsInterface::class);
