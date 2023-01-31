@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Application\Actions;
+namespace App\Actions;
 
 use JsonSerializable;
 
@@ -76,7 +76,7 @@ class ActionError implements JsonSerializable
     /**
      * @return array
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         $payload = [
             'type' => $this->type,
