@@ -6,8 +6,8 @@ services:
     working_dir: /var/www
     command: php -S 0.0.0.0:8080 -t public
     environment:
-      docker: "true"
+      - DOCKER=true
     ports:
-      - "8080:8080"
+      - 8080:8080
     volumes:
       - .:/var/www
