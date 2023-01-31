@@ -17,34 +17,8 @@ return function (App $app) {
 
     $app->get('/', function (Request $request, Response $response) {
 
-
-
-        // Using Medoo namespace.
-
-
-// Connect the database.
-        $database = new Medoo([
-            'type' => 'pgsql',
-            'host' => 'postgres',
-            'database' => 'scacchieropoli',
-            'username' => 'scacchieropoli',
-            'password' => 'scacchieropoli'
-        ]);
-
-        $database->insert('account', [
-            'user_name' => 'foo',
-            'email' => 'foo@bar.com'
-        ]);
-
-        $data = $database->select('account', [
-            'user_name',
-            'email'
-        ], [
-            'user_id' => 50
-        ]);
-
-
         $response->getBody()->write('Hello world!');
+
         return $response;
     });
 
