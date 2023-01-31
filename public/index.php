@@ -18,10 +18,11 @@ if (false) { // Should be set to true in production
 	$containerBuilder->enableCompilation(__DIR__ . '/../var/cache');
 }
 
-/*
 // Set up settings
-$settings = require __DIR__ . '/../app/settings.php';
+$settings = require __DIR__ . '/../src/services/settings.php';
 $settings($containerBuilder);
+
+/*
 
 // Set up dependencies
 $dependencies = require __DIR__ . '/../app/dependencies.php';

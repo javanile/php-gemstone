@@ -25,6 +25,5 @@ return function (ContainerBuilder $containerBuilder) {
 
             return $logger;
         },
-
     ]);
 };
