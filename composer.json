@@ -1,29 +1,29 @@
 {
     "name": "javanile/php-gemstone",
-    "description": "A Slim Framework skeleton application for rapid development",
+    "description": "PHP Gemstone skeleton application for rapid development",
     "keywords": [
         "microframework",
         "rest",
         "router",
         "psr7"
     ],
-    "homepage": "http://github.com/javanile/php-gemstone",
+    "homepage": "https://github.com/javanile/php-gemstone",
     "license": "MIT",
     "authors": [
         {
             "name": "Francesco Bianco",
             "email": "bianco@javanile.org",
-            "homepage": "http://www.javanile.org/"
+            "homepage": "https://www.javanile.org/"
         },
         {
             "name": "Josh Lockhart",
             "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
+            "homepage": "https://www.joshlockhart.com/"
         },
         {
             "name": "Pierre Berube",
             "email": "pierre@lgse.com",
-            "homepage": "http://www.lgse.com/"
+            "homepage": "https://www.lgse.com/"
         }
     ],
     "require": {
@@ -44,16 +44,19 @@
     },
     "config": {
         "process-timeout": 0,
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/app"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/app"
         }
     },
     "scripts": {

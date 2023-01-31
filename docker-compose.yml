@@ -1,9 +1,5 @@
 version: '3.7'
 
-volumes:
-  logs:
-    driver: local
-
 services:
   gemstone:
     build: .
@@ -12,9 +8,6 @@ services:
     environment:
       docker: "true"
     ports:
-      - 8080:8080
+      - "8080:8080"
     volumes:
       - .:/var/www
-      - logs:/var/www/logs
-    links:
-      - postgres

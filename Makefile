@@ -1,4 +1,12 @@
 
+build:
+	@docker-compose build
+
+install: build
+	@docker-compose run --rm gemstone composer install
+
+update: build
+	@docker-compose run --rm gemstone composer update
 
 start:
 	@docker-compose up -d

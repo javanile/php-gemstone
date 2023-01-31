@@ -1,5 +1,6 @@
 FROM php:8-alpine
 
-RUN apk --no-cache add postgresql-dev
+RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
-RUN docker-php-ext-install pdo pdo_pgsql
+#RUN apk --no-cache add postgresql-dev
+#RUN docker-php-ext-install pdo pdo_pgsql
