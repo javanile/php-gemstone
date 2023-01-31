@@ -22,12 +22,11 @@ if (false) { // Should be set to true in production
 $settings = require __DIR__ . '/../src/services/settings.php';
 $settings($containerBuilder);
 
-/*
-
 // Set up dependencies
-$dependencies = require __DIR__ . '/../app/dependencies.php';
-$dependencies($containerBuilder);
+$records = require __DIR__ . '/../src/services/records.php';
+$records($containerBuilder);
 
+/*
 // Set up repositories
 $repositories = require __DIR__ . '/../app/repositories.php';
 $repositories($containerBuilder);
@@ -48,6 +47,10 @@ $middleware($app);
 // Register routes
 $api = require __DIR__ . '/../src/routes/api.php';
 $api($app);
+
+// Register routes
+$pages = require __DIR__ . '/../src/routes/pages.php';
+$pages($app);
 
 /** @var SettingsInterface $settings */
 $settings = $container->get(SettingsInterface::class);
