@@ -7,7 +7,7 @@ use App\Domain\User\User;
 use App\Domain\User\UserNotFoundException;
 use App\Domain\User\UserRepository;
 
-class GoogleSpreadsheet implements RecordRepository
+class Spreadsheet implements RecordRepository
 {
     /**
      * @var User[]
@@ -19,7 +19,7 @@ class GoogleSpreadsheet implements RecordRepository
      *
      * @param array|null $users
      */
-    public function __construct(array $users = null)
+    public function __construct()
     {
         $this->users = $users ?? [
             1 => new User(1, 'bill.gates', 'Bill', 'Gates'),
