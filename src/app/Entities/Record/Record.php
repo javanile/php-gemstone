@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Domain\User;
+namespace App\Entities\Record;
 
 use JsonSerializable;
 
@@ -76,7 +76,7 @@ class Record implements JsonSerializable
     /**
      * @return array
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return [
             'id' => $this->id,

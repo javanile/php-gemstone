@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Persistence;
 
-interface SheetbaseInterface
+interface SpreadsheetInterface
 {
     /**
      * @param string $key

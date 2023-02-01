@@ -26,6 +26,10 @@ $settings($containerBuilder);
 $records = require __DIR__ . '/../src/services/records.php';
 $records($containerBuilder);
 
+// Set up dependencies
+$spreadsheet = require __DIR__ . '/../src/services/spreadsheet.php';
+$spreadsheet($containerBuilder);
+
 /*
 // Set up repositories
 $repositories = require __DIR__ . '/../app/repositories.php';

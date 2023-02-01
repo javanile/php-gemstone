@@ -1,20 +1,21 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Persistence\User;
+namespace App\Persistence;
 
 use App\Domain\User\User;
 use App\Domain\User\UserNotFoundException;
-use App\Domain\User\UserRepository;
+use App\Entities\Record\Record;
+use App\Entities\Record\RecordRepository;
 use Psr\Log\LoggerInterface;
 
-class SheetbaseRepository implements RecordRepository
+class SpreadsheetRepository implements RecordRepository
 {
 
     /**
      * @var SheetbaseInterface
      */
-    protected $sheetbase;
+    protected $spreadsheet;
 
     /**
      * InMemoryUserRepository constructor.
@@ -22,9 +23,9 @@ class SheetbaseRepository implements RecordRepository
      * @param array|null $users
      */
     public function __construct(
-        SpreadsheetInterface $sheetbase
+        SpreadsheetInterface $spreadsheet
     ) {
-        $this->sheetbase = $sheetbase;
+        $this->spreadsheet = $spreadsheet;
     }
 
     /**
@@ -38,7 +39,7 @@ class SheetbaseRepository implements RecordRepository
     /**
      * {@inheritdoc}
      */
-    public function findUserOfId(int $id): User
+    public function findUserOfId(int $id): Record
     {
         if (!isset($this->users[$id])) {
            # throw new UserNotFoundException();
