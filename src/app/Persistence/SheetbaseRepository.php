@@ -9,13 +9,13 @@ use App\Entities\Record\Record;
 use App\Entities\Record\RecordRepository;
 use Psr\Log\LoggerInterface;
 
-class SpreadsheetRepository implements RecordRepository
+class SheetbaseRepository implements RecordRepository
 {
 
     /**
      * @var SheetbaseInterface
      */
-    protected $spreadsheet;
+    protected $sheetbase;
 
     /**
      * InMemoryUserRepository constructor.
@@ -23,9 +23,9 @@ class SpreadsheetRepository implements RecordRepository
      * @param array|null $users
      */
     public function __construct(
-        SpreadsheetInterface $spreadsheet
+        SheetbaseInterface $sheetbase
     ) {
-        $this->spreadsheet = $spreadsheet;
+        $this->sheetbase = $sheetbase;
     }
 
     /**
