@@ -27,8 +27,8 @@ $records = require __DIR__ . '/../src/services/records.php';
 $records($containerBuilder);
 
 // Set up dependencies
-$spreadsheet = require __DIR__ . '/../src/services/spreadsheet.php';
-$spreadsheet($containerBuilder);
+$sheetbase = require __DIR__ . '/../src/services/sheetbase.php';
+$sheetbase($containerBuilder);
 
 /*
 // Set up repositories

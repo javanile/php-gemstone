@@ -16,10 +16,13 @@ return function (ContainerBuilder $containerBuilder) {
                 'logError'            => false,
                 'logErrorDetails'     => false,
                 'logger' => [
-                    'name' => 'slim-app',
-                    'path' => isset($_ENV['DOCKER']) ? 'php://stdout' : __DIR__ . '/../var/logs/app.log',
+                    'name' => 'php-gemstone',
+                    'path' => isset($_ENV['DOCKER']) ? 'php://stdout' : __DIR__ . '/../var/logs/gemstone.log',
                     'level' => Logger::DEBUG,
                 ],
+                'sheetbase' => [
+                    'database' => '1-SQHS23HPxNoEXSss7nAMShZMz5wwM8VAd8o16X6WRs'
+                ]
             ]);
         }
     ]);

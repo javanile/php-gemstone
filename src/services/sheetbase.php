@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use App\Application\Settings\SettingsInterface;
+use App\Settings\SettingsInterface;
 use App\Persistence\SheetbaseInterface;
 use Javanile\Sheetbase\Database;
 use DI\ContainerBuilder;
@@ -18,7 +18,7 @@ return function (ContainerBuilder $containerBuilder) {
             $settings = $c->get(SettingsInterface::class);
 
             $sheetbaseSettings = $settings->get('sheetbase');
-            $sheetbase = new Database($sheetbaseSettings['url']);
+            $sheetbase = new Database($sheetbaseSettings);
 
             return $sheetbase;
         },
